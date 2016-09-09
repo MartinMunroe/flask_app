@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="jumbotron">
+			<div class="container">
+				{% if name %}
+					<h1>Welcome back {{ name }}!</h1>
+				{% else %}
+					<h1>Hello, what's your name?</h1>
+					<form action="/" class="form-inline">
+						<div class="form-group">
+							<input type="text" name="name" placeholder="Enter your name here" class="form-control">
+						</div>
+						<input type="submit" value="Submit" class="btn btn-primary">
+					</form>
+				{% endif %}
+					<h1>Please enter a city for the current weather conditions</h1>
+					<form action="/" class = "form-inline">
+						<div class="form-group">
+							<input type="text" name="city" placeholder="Enter a city w/wo country" class="form-control">
+								<a href="{{ url_for('weath_box') }}"> </a>
+						</div>
+						<input type="submit" value="Submit" class="btn btn-primary")>
+					</form>
+					<h1>{{ weather }}</h1>
+					<a href="{{ url_for('index') }}">Choose another city</a>
+				<a href="{{ url_for('about') }}">About this project</a>
+			</div>
+		</div>
+	</body>
+</html>
