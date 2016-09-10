@@ -9,7 +9,7 @@ from os import environ
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
-api_key = environ['WEATHER_API']
+api_key = os.environ['WEATHER_API']
 
 
 def get_weather(address, api_key):
@@ -36,8 +36,8 @@ def weath_box():
 	return render_template('weath_box.html')
 
 if __name__ == "__main__":
-	port = int(os.environ.get("PORT", 5000))
-    app.run(debug=True, host='0.0.0.0', port=port)
+	port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
 
 # import os
 # from intro_to_flask import app
