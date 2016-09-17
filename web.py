@@ -25,7 +25,7 @@ def get_weather(address, api_key):
 def index():
     name = request.values.get('name')
     city = request.values.get('city')
-    return render_template('index.html', name=name, city=city, weather =get_weather(city,api_key))
+    return render_template('index.html', name=name, city=city, weather =get_weather(city,api_key)
 
 @app.route('/about')
 def about():
