@@ -1,1 +1,1 @@
-web : python web.py $Port
+web : python web.py
